@@ -6,21 +6,21 @@ public abstract class LandVehicle extends Vehicle{
     int numOfWheels;
     String landType;
 
-    public LandVehicle(boolean motorized, int mileage, int numOfWheels, String landType){
-        super(motorized, mileage);
+    public LandVehicle(boolean motorized, int mileage, String model, int numOfWheels, String landType){
+        super(motorized, mileage, model);
         this.numOfWheels = numOfWheels;
         this.landType = landType;
     }
 
-    public LandVehicle(boolean motorized, int numOfWheels, String landType){
-        this(motorized, 0, numOfWheels, landType);
+    public LandVehicle(boolean motorized, String model, int numOfWheels, String landType){
+        this(motorized, 0, model, numOfWheels, landType);
     }
 
-	int GetNumOfWheels(){
+	public int GetNumOfWheels(){
 	    return numOfWheels;
     }
 
-    void GetLandType(){
+    public String GetLandType(){
 	    return landType;
     }
 }
