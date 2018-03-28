@@ -3,32 +3,35 @@ package vehicles;
 import java.lang.String;
 
 public abstract class Vehicle{
-	boolean motorized;
-	int mileage;
-	String model;
+    private int mileage;
+    private String model;
+    private int maxPassengers;
+    private int maxSpeed;
 
-    public Vehicle(boolean motorized, int mileage, String model){
-        this.motorized = motorized;
+    public Vehicle(int mileage, String model, int maxPassengers, int maxSpeed){
         this.mileage = mileage;
         this.model = model;
-    }
-
-	public Vehicle(boolean motorized, String model){
-        this(motorized, 0, model);
+        this.maxPassengers = maxPassengers;
+        this.maxSpeed = maxSpeed;
     }
 
 	public int Drive(int kmToDrive){
         return this.mileage += kmToDrive;
     }
 
-	public String GetModel(){
-	    return model;
-    }
-
-	public int GetMileage(){
+    public int GetMileage(){
         return mileage;
     }
 
-	abstract int GetMaxPassengers();
-	abstract int GetMaxSpeed();
+    public String GetModel(){
+	    return model;
+    }
+
+    public int GetMaxPassengers(){
+        return maxPassengers;
+    }
+
+    public int GetMaxSpeed(){
+        return maxSpeed;
+    }
 }

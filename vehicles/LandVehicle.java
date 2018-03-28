@@ -4,16 +4,13 @@ import java.lang.String;
 
 public abstract class LandVehicle extends Vehicle{
     int numOfWheels;
+    //TODO: enum type: {paved, dirt}
     String landType;
 
-    public LandVehicle(boolean motorized, int mileage, String model, int numOfWheels, String landType){
-        super(motorized, mileage, model);
+    public LandVehicle(int mileage, String model, int maxPassengers, int maxSpeed, int numOfWheels, String landType){
+        super(mileage, model, maxPassengers, maxSpeed);
         this.numOfWheels = numOfWheels;
         this.landType = landType;
-    }
-
-    public LandVehicle(boolean motorized, String model, int numOfWheels, String landType){
-        this(motorized, 0, model, numOfWheels, landType);
     }
 
 	public int GetNumOfWheels(){

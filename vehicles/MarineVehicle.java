@@ -3,25 +3,26 @@ package vehicles;
 import java.lang.String;
 
 public abstract class MarineVehicle extends Vehicle{
-    String country;
     boolean withWindDirection;
+    String country;
 
-    public MarineVehicle(boolean motorized, int mileage, String model, String country, boolean withWindDirection){
-        super(motorized, mileage, model);
+    public MarineVehicle(int mileage, String model, int maxPassengers, int maxSpeed, boolean withWindDirection, String country){
+        super(mileage, model, maxPassengers, maxSpeed);
+        this.withWindDirection = withWindDirection;
         this.country = country;
+    }
+
+    public void SetWithWindDirection(boolean withWindDirection){
         this.withWindDirection = withWindDirection;
     }
-
-    public MarineVehicle(boolean motorized, int mileage, String country, boolean withWindDirection){
-        this(motorized, 0, country, withWindDirection);
+    public boolean GetWithWindDirection(){
+        return withWindDirection;
     }
 
-    void SetWithWindDirection(boolean withWindDirection){
-        this.withWindDirection = withWindDirection;
+    public void SetCountry(String country){
+        this.country = country;
     }
-
-	void SetCountry(String country){
-	    this.country = country;
+    public String GetCountry(){
+        return country;
     }
-
 }
