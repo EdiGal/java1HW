@@ -28,7 +28,6 @@ public class Main {
 
             else if (vehicleType.equals("downspy")) {
 
-                String powerSource;
                 System.out.println("enter power source");
                 String powerSource = sc.next();
 

@@ -1,6 +1,6 @@
 package vehicles;
 
 interface NotMotorized {
-    string GetPowerSource();
+    String GetPowerSource();
     EnergyRating GetEnergyRating();
 }

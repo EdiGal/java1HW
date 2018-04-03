@@ -1,18 +1,17 @@
 package vehicles;
 
 public abstract class AirVehicle extends Vehicle{
-	boolean isMilitary;
-	AirVehicleType type;
+	AirVehicleType inUse;
 
-	public AirVehicle(int mileage, String maker, String model, int maxPassengers, int maxSpeed, AirVehicleType type){
+	public AirVehicle(int mileage, String maker, String model, int maxPassengers, int maxSpeed, AirVehicleType inUse){
 	    super(mileage, maker, model, maxPassengers, maxSpeed);
-        this.type = type;
+        this.inUse = inUse;
     }
 
-	public void SetMilitary(boolean isMilitary){
-		this.isMilitary = isMilitary;
+	public void SetInUse(AirVehicleType inUse){
+		this.inUse = inUse;
 	}
-	public void GetMilitary(boolean isMilitary){
-		return isMilitary;
+	public AirVehicleType GetMilitary(){
+		return inUse;
 	}
 }
