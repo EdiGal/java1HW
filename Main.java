@@ -13,7 +13,7 @@ public class Main {
             vehicleType = vehicleType.toLowerCase();
 
             if (vehicleType.equals("jeep")) {
-                System.out.println("you choose jeep");
+                System.out.println("Let's add a jeep");
 
                 System.out.println("enter maker");
                 String maker = sc.next();
@@ -25,16 +25,24 @@ public class Main {
                 int lifeTime = getLifeTime();
                 Jeep jeep = new Jeep(0,maker, model, 5, 180, 4, Passability.DIRT, kml, lifeTime, CommercialType.MINI);
             }
-            else if(vehicleType.equals("help")){
-                System.out.println("jeep");
+
+            else if (vehicleType.equals("downspy")) {
+
+                String powerSource;
+                System.out.println("enter power source");
+                String powerSource = sc.next();
+
+                int kml = getKml();
+                DownSpy downSpy = new DownSpy(kml, powerSource);
             }
+
+            else if(vehicleType.equals("help")){ System.out.println("jeep, downspy"); }
+
             else if(vehicleType.equals("exit")){ }
-            else {
-                System.out.println("no vehicle matched");
-            }
+
+            else { System.out.println("no vehicle matched"); }
+
         }while(!vehicleType.equals("exit"));
-
-
     }
 
     public static int getKml() {

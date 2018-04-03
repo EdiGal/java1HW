@@ -4,8 +4,10 @@ public class DownSpy extends AirVehicle implements NotMotorized {
     EnergyRating energyRating;
     String powerSource;
 
-    public Glider(int mileage, String maker, String model, int maxPassengers, int maxSpeed, AirVehicleType type, EnergyRating energyRating, String powerSource){
-        super(mileage, maker, model, maxPassengers, maxSpeed, AirVehicleType.MILITARY);
+    public Glider(int mileage, String powerSource){
+        super(mileage, "NA", "NA", 1, 50, AirVehicleType.MILITARY);
+        this.energyRating = EnergyRating.C;
+        this.powerSource = powerSource;
     }
 
     @Override
