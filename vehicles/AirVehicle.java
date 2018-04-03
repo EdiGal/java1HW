@@ -1,12 +1,12 @@
 package vehicles;
 
 public abstract class AirVehicle extends Vehicle{
-	//TODO: enum type: {military, civilian}
 	boolean isMilitary;
+	AirVehicleType type;
 
-	public AirVehicle(int mileage, String model, int maxPassengers, int maxSpeed, boolean isMilitary){
-	    super(mileage, model, maxPassengers, maxSpeed);
-        this.isMilitary = isMilitary;
+	public AirVehicle(int mileage, String maker, String model, int maxPassengers, int maxSpeed, AirVehicleType type){
+	    super(mileage, maker, model, maxPassengers, maxSpeed);
+        this.type = type;
     }
 
 	public void SetMilitary(boolean isMilitary){

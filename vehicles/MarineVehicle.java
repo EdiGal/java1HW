@@ -6,8 +6,8 @@ public abstract class MarineVehicle extends Vehicle{
     boolean withWindDirection;
     String country;
 
-    public MarineVehicle(int mileage, String model, int maxPassengers, int maxSpeed, boolean withWindDirection, String country){
-        super(mileage, model, maxPassengers, maxSpeed);
+    public MarineVehicle(int mileage, String maker, String model, int maxPassengers, int maxSpeed, boolean withWindDirection, String country){
+        super(mileage, maker, model, maxPassengers, maxSpeed);
         this.withWindDirection = withWindDirection;
         this.country = country;
     }

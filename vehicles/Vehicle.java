@@ -4,12 +4,14 @@ import java.lang.String;
 
 public abstract class Vehicle{
     private int mileage;
+    private String maker;
     private String model;
     private int maxPassengers;
     private int maxSpeed;
 
-    public Vehicle(int mileage, String model, int maxPassengers, int maxSpeed){
+    public Vehicle(int mileage, String maker, String model, int maxPassengers, int maxSpeed){
         this.mileage = mileage;
+        this.maker = maker;
         this.model = model;
         this.maxPassengers = maxPassengers;
         this.maxSpeed = maxSpeed;

@@ -1,5 +1,6 @@
-interface Motorized {
+package vehicles;
+
+interface NotMotorized {
     string GetPowerSource();
-    //TODO: enum A,B c
-    string GetEnergyRating();
+    EnergyRating GetEnergyRating();
 }
