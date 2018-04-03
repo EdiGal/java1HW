@@ -5,29 +5,35 @@ import vehicles.*;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("What vehicle you want to create? ");
+        String vehicleType;
 
-        String vehicleType = sc.next();
-        vehicleType = vehicleType.toLowerCase();
+        do{
+            System.out.print("What vehicle you want to create? (help)");
+            vehicleType = sc.next();
+            vehicleType = vehicleType.toLowerCase();
 
-        if (vehicleType.equals("jeep")) {
-            System.out.println("you choose jeep");
+            if (vehicleType.equals("jeep")) {
+                System.out.println("you choose jeep");
 
-            System.out.println("enter maker");
-            String maker = sc.next();
+                System.out.println("enter maker");
+                String maker = sc.next();
 
-            System.out.println("enter model");
-            String model = sc.next();
+                System.out.println("enter model");
+                String model = sc.next();
 
-            int kml = getKml();
+                int kml = getKml();
+                int lifeTime = getLifeTime();
+                Jeep jeep = new Jeep(0,maker, model, 5, 180, 4, Passability.DIRT, kml, lifeTime, CommercialType.MINI);
+            }
+            else if(vehicleType.equals("help")){
+                System.out.println("jeep");
+            }
+            else if(vehicleType.equals("exit")){ }
+            else {
+                System.out.println("no vehicle matched");
+            }
+        }while(!vehicleType.equals("exit"));
 
-            int lifeTime = getLifeTime();
-
-            Jeep jeep = new Jeep(0,maker, model, 5, 180, 4, Passability.DIRT, kml, lifeTime, CommercialType.MINI);
-
-        } else {
-            System.out.println("no vehicle matched");
-        }
 
     }
 
