@@ -21,6 +21,10 @@ public abstract class Vehicle{
         return this.mileage += kmToDrive;
     }
 
+    public void ResetMilage(){
+        this.mileage = 0;
+    }
+
     public int GetMileage(){
         return mileage;
     }
