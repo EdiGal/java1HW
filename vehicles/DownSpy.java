@@ -19,4 +19,9 @@ public class DownSpy extends AirVehicle implements NotMotorized {
     public EnergyRating GetEnergyRating(){
         return energyRating;
     }
+
+    @Override
+    public String toString(){
+        return super.toString()+", energyRating: "+this.energyRating+", powerSource: "+this.powerSource;
+    }
 }

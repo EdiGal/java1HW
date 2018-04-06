@@ -19,4 +19,9 @@ public abstract class LandVehicle extends Vehicle{
     public Passability GetLandType(){
 	    return landType;
     }
+
+    @Override
+    public String toString(){
+        return super.toString()+", num of wheels: "+this.numOfWheels+", passability: "+this.landType;
+    }
 }

@@ -12,11 +12,6 @@ public class Jeep extends LandVehicle implements Motorized, Commercial{
         this.commercialType = commercialType;
     }
 
-//    @Override
-//    public String toString(){
-//        return "Jeep " + maker + " " + model+ ". mileage: "+mileage+", maxPassengers: "+maxPassengers+", maxSpeed: "+maxSpeed+", numOfWheels: "+numOfWheels+", landType: "+landType
-//    }
-
     @Override
     public int GetFuelConsumption(){
         return kml;
@@ -35,5 +30,10 @@ public class Jeep extends LandVehicle implements Motorized, Commercial{
     @Override
     public CommercialType getCommercialType(){
         return commercialType;
+    }
+
+    @Override
+    public String toString(){
+        return "Jeep: "+super.toString()+", fuel consumption: "+this.kml+", lifetime: "+this.lifeTime+", commercial type: "+this.commercialType;
     }
 }

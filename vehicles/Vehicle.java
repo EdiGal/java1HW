@@ -36,4 +36,9 @@ public abstract class Vehicle{
     public int GetMaxSpeed(){
         return maxSpeed;
     }
+
+    @Override
+    public String toString(){
+        return "maker: "+this.maker+", model: "+this.model+", milage: "+this.mileage+", max passengers: "+this.maxPassengers+", max speed: "+this.maxSpeed;
+    }
 }

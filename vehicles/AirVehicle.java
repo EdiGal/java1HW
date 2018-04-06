@@ -14,4 +14,9 @@ public abstract class AirVehicle extends Vehicle{
 	public AirVehicleType GetMilitary(){
 		return inUse;
 	}
+
+	@Override
+	public String toString(){
+		return super.toString()+", in use by: "+this.inUse;
+	}
 }

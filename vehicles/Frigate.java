@@ -4,24 +4,29 @@ public class Frigate extends MarineVehicle implements Motorized{
     private int kml;
     private int lifetime;
 
-    public Frigate(int mileage, String maker, String model, int maxPassengers, int maxSpeed, boolean withWindDirection){
-        super(mileage, maker, model, maxPassengers, maxSpeed, withWindDirection, "Israel");
+    public Frigate(String maker, String model, int maxPassengers, int maxSpeed, boolean withWindDirection){
+        super(0, maker, model, maxPassengers, maxSpeed, withWindDirection, "Israel");
         this.kml = 500;
         this.lifetime = 4;
     }
 
     @Override
-    int GetFuelConsumption(){
+    public int GetFuelConsumption(){
         return kml;
     }
 
     @Override
-    void SetFuelConsumption(int fuelConsumption){
+    public void SetFuelConsumption(int fuelConsumption){
         this.kml = fuelConsumption;
     }
 
     @Override
-    int GetLifetime(){
+    public int GetLifetime(){
         return lifetime;
+    }
+
+    @Override
+    public String toString(){
+        return super.toString()+", fuel consumption: "+this.kml+", lifetime: "+this.lifetime;
     }
 }

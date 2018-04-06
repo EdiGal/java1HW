@@ -25,4 +25,9 @@ public abstract class MarineVehicle extends Vehicle{
     public String GetCountry(){
         return country;
     }
+
+    @Override
+    public String toString(){
+        return super.toString()+", with wind direction: "+this.withWindDirection+", country: "+this.country;
+    }
 }
