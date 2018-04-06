@@ -25,8 +25,11 @@ public abstract class Vehicle{
         return mileage;
     }
 
+    public String GetMaker(){
+        return maker;
+    }
     public String GetModel(){
-	    return model;
+        return model;
     }
 
     public int GetMaxPassengers(){
